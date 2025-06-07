@@ -8,13 +8,12 @@ export default function Code({
   onChange: OnChange
 }) {
   return (
-    <div className='border w-[50vw] h-[30vh] md:w-[30vw] md:h-[70vh]'>
-      <Editor
-        language={langFamily}
-        defaultValue=''
-        onChange={onChange}
-        options={{ minimap: { enabled: false } }}
-      />
-    </div>
+    <Editor
+      className='border w-[100%] h-[100%] flex-1'
+      language={langFamily}
+      defaultValue=''
+      onChange={onChange}
+      options={{ automaticLayout: true, minimap: { enabled: false } }}
+    />
   )
 }
