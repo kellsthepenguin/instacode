@@ -1,21 +1,22 @@
-import RunButton from '../components/RunButton'
-import Code from '../components/Code'
-import Result from '../components/Result'
-
-export default function Home() {
+export default function Index() {
   return (
     <div className='absolute left-[50%] top-[50%] transform-[translate(-50%,-50%)]'>
-      <div className='my-0 mx-auto flex text-left flex-col md:flex-row'>
-        <div className='m-3 col-lg-5'>
-          <div className='flex flex-row items-center justify-between mb-3'>
-            <p className='text-2xl font-bold'>Code</p>
-            <RunButton onClick={() => {}} />
+      <div className='border w-128 h-40 lg:w-256 rounded-md'>
+        <div className='p-5 h-full flex flex-col justify-between'>
+          <p className='font-bold text-3xl'>Instacode</p>
+          <div className='flex'>
+            <input
+              className='border p-4 w-full rounded-md'
+              type='password'
+              placeholder='Password'
+            />
+            <button
+              className='p-5 ml-3 border rounded-md cursor-pointer'
+              onClick={() => (location.href = '/code')}
+            >
+              Go
+            </button>
           </div>
-          <Code />
-        </div>
-        <div className='m-3 col-lg-5'>
-          <p className='text-2xl font-bold mb-3'>Result</p>
-          <Result />
         </div>
       </div>
     </div>
