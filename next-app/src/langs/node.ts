@@ -3,9 +3,11 @@ import vm from 'node:vm'
 
 export default class Node implements Language {
   name: string
+  langFamily: string
 
   constructor() {
     this.name = 'node'
+    this.langFamily = 'javascript'
   }
 
   async run(code: string) {
@@ -19,7 +21,6 @@ export default class Node implements Language {
       }
     }
 
-    // VM용 컨텍스트 생성
     const context = vm.createContext({
       process: fakeProcess,
       console: {
