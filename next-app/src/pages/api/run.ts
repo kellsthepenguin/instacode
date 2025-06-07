@@ -11,7 +11,6 @@ export default async function handler(
   res: NextApiResponse<ResponseData>
 ) {
   const { langName, code } = req.body
-  console.log(langs)
   if (!langs.has(langName)) return res.json({ ok: false })
   const language = langs.get(langName)
 
