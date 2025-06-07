@@ -11,7 +11,7 @@ export default function RunButton({
   return (
     <button
       className={
-        'rounded-md bg-blue-600 py-2 px-4 text-center text-sm text-white hover:bg-blue-700 ' +
+        'rounded-md border py-2 px-4 text-center text-sm cursor-pointer' +
         className
       }
       onClick={onClick}
