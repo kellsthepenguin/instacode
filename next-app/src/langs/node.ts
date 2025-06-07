@@ -28,7 +28,11 @@ export default class Node implements Language {
     })
 
     const script = new vm.Script(code)
-    await script.runInContext(context)
+    try {
+      await script.runInContext(context)
+    } catch (err) {
+      captured += err
+    }
     return captured
   }
 }
