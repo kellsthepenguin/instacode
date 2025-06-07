@@ -10,7 +10,7 @@ export default class Node implements Language {
     this.langFamily = 'javascript'
   }
 
-  async run(code: string) {
+  async run(code: string, input: string) {
     let captured = ''
 
     const fakeProcess = {
