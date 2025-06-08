@@ -14,7 +14,7 @@ export default async function handler(
   if (!langs.has(langName)) return res.json({ ok: false })
   const language = langs.get(langName)
 
-  const result = await language.run(code)
+  const result = await language.run(code, null)
 
   res.json({ ok: true, result })
 }
